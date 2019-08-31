@@ -1,0 +1,63 @@
+#include <iostream>
+#include <time.h>
+#include <cstdlib>
+
+using namespace std;
+
+
+int main()
+{
+    srand(time(0));
+
+    int x;
+    string y,z;
+    string a[3]{"rock","paper","scissors"};
+    x = 0+rand()%2;
+    y = a[x];
+
+    cin>>z;
+
+    if(z == a[0]){
+        switch(x){
+    case 0:
+        cout<< "tie!";break;
+    case 1:
+        cout<< "lose!";break;
+    case 2:
+        cout<< "win!";break;
+    }
+    }
+    if(z == a[1]){
+        switch(x){
+    case 0:
+        cout<< "lose!";break;
+    case 1:
+        cout<< "win!";break;
+    case 2:
+        cout<< "tie!";break;
+    }
+    }
+    if(z == a[2]){
+        switch(x){
+    case 0:
+        cout<< "win!";break;
+    case 1:
+        cout<< "tie!";break;
+    case 2:
+        cout<< "lose!";break;
+    }
+    }
+
+    if(z != a[1]){
+       if(z != a[2]){
+            if(z != a[0]){
+        cout<< "please enter rock, paper or scissors!";
+            }
+        else{
+            cout<< y;
+        }
+       }
+    }
+
+    return 0;
+}
